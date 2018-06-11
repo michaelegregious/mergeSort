@@ -30,8 +30,8 @@ function merge(left, right){
             j++;
         }        
     }    
-    return (i === left.length) 
-        ? [...newArray, ...right.slice(j)]
-        : [...newArray, ...left.slice(i)];
+    return (i === left.length)
+        ? newArray.concat(right.slice(j))
+        : newArray.concat(left.slice(i));
 
 }
